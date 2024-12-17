@@ -1,0 +1,95 @@
+import { Canvas, Controls, Markdown, Meta } from '@storybook/blocks';
+import * as ButtonStories from './button.stories';
+
+<Meta of={ButtonStories} />
+
+# Button
+
+### Import
+```
+import { ButtonModule } from 'primeng/button';
+```
+
+### Directive
+Un Button peut également être utilisé comme directive en utilisant `pButton`.
+Contrairement au composant `p-button`, la directive `pButton` n'utilise pas d'effet, utilisez la directive `pRipple` pour activer l'ondulation.
+<Canvas of={ButtonStories.Directive} />
+
+### Link
+Affichage sous forme de lien.
+<Canvas of={ButtonStories.Link} />
+
+### Icons
+L'icône d'un bouton est spécifiée avec la propriété `icon` et la position est configurée à l'aide de l'attribut `iconPos.\
+Il est possible d'utiliser la libraires[Prime Icons](?path=/docs/system-primeicons--docs) et [Fontawesome](https://fontawesome.com/icons).
+<Canvas of={ButtonStories.Icons} />
+
+### Loading
+L'état chargement est contrôlé avec la propriété de `loading`.
+<Canvas of={ButtonStories.Loading} />
+
+### Disabled
+Lorsque l'option `disabled` est présente, l'élément ne peut pas être modifié ni focalisé.
+<Canvas of={ButtonStories.Disabled} />
+
+### Severity
+Le type d'importance définit le type de bouton.
+<Canvas of={ButtonStories.Severity} />
+
+### Rounded
+Les boutons arrondis ont un rayon de bordure circulaire.
+<Canvas of={ButtonStories.Rounded} />
+
+### Text
+Les boutons de texte sont affichés sous forme d’éléments textuels.
+<Canvas of={ButtonStories.Text} />
+
+### Outlined
+Les boutons en contour affichent initialement une bordure sans arrière-plan.
+<Canvas of={ButtonStories.Outlined} />
+
+### Badges
+Les boutons ont un support de badge intégré avec les propriétés `badge` et `badgeClass`.
+<Canvas of={ButtonStories.Badges} />
+
+### Button Group
+Plusieurs boutons sont regroupés lorsqu'ils sont enveloppés dans un élément avec le composant `ButtonGroup`.
+<Canvas of={ButtonStories.ButtonGroup} />
+
+### Sizes
+Plusieurs boutons sont regroupés lorsqu'ils sont enveloppés dans un élément avec le composant `ButtonGroup`.
+<Canvas of={ButtonStories.Sizes} />
+
+
+### Style
+Vous trouverez ci-dessous la liste des classes de style structurel. Pour les classes de thème.
+<Markdown>
+  {`
+| Name         | Element |
+| ------------ | ------------ |
+| p-button | Button element |
+| p-button-icon | Icon element |
+| p-button-label | p-button-label |
+`}
+</Markdown>
+
+### Accessibility
+Le composant `Button` restitue un élément de bouton natif qui inclut implicitement tout accessoire transmis.
+Le texte décrivant le bouton est défini avec `aria-label`.
+S'il n'est pas présent,`label` est utilisé comme valeur.
+Si le bouton est uniquement une icône ou si un modèle personnalisé est utilisé,
+il est recommandé d'utiliser `aria-label` pour que les lecteurs d'écran puissent lire correctement l'élément.
+
+```
+<p-button icon="pi pi-check" aria-label="Submit" />
+<p-button icon="pi pi-check" label="Submit" />
+
+<p-button class="youtube p-0" aria-label="Youtube">
+  <i class="pi pi-youtube px-2"></i>
+  <span class="px-3">Youtube</span>
+</p-button>
+```
+
+### Props
+Définit les propriétés d'entrée du composant.
+<Controls of={ButtonStories.Default} />

@@ -1,0 +1,15 @@
+
+/* Typo pour l'input custom immatriculation */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import "@awesome.me/kit-c75d89fbd2/icons/css/all.css";
+
+html, body, .p-component {
+  font-family: sans-serif !important;
+}
+
+/* Fond blanc forcé pour tout le contenu */
+html, body, #storybook-root {
+  background-color: #ffffff !important;
+  margin: 0;
+  padding: 0;
+}
