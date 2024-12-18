@@ -1,25 +1,19 @@
-import type { StorybookConfig } from "@storybook/angular";
+import type { StorybookConfig } from '@storybook/angular';
 
 const config: StorybookConfig = {
-  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
-    "@storybook/addon-essentials",
-    "@storybook/addon-themes",
-    "@storybook/addon-interactions",
-    "@storybook/addon-actions",
-    "@storybook/addon-links",
-    "@storybook/addon-docs",
-    "@storybook/addon-viewport",
-    "@storybook/addon-onboarding",
-    "@chromatic-com/storybook", // Supprimez si inutile
+    '@storybook/addon-essentials',
+    '@storybook/addon-themes',
+    '@storybook/addon-interactions',
+    '@storybook/addon-docs',
   ],
   framework: {
-    name: "@storybook/angular",
-    options: {
-      docs: {
-        inlineStories: true,
-      },
-    },
+    name: '@storybook/angular',
+    options: {},
+  },
+  core: {
+    builder: 'webpack5',
   },
 };
 
