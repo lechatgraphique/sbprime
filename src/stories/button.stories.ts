@@ -7,7 +7,7 @@ const meta: Meta<Button> = {
   title: 'PrimeNG/Button',
   decorators: [
     moduleMetadata({
-      imports: [ButtonModule, ButtonGroupModule],
+      imports: [ButtonModule, ButtonGroupModule], // Ajout spécifique pour cette story
     }),
   ],
   argTypes: {
